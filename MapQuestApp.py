@@ -4,6 +4,10 @@ import requests
 main_api = "https://www.mapquestapi.com/directions/v2/route?"
 key = "1fRfZdxZ6MksxGxYZ8k81IeaR9ASo5pI"
 
+from colorama import Fore, Back, Style
+print(Fore.BLACK + Style.DIM) #FOR ADDING OF FONT COLOR AND THE OPACITY OF THE FONT
+print(Back.WHITE + "\n\n---------------------------------------- MAPQUEST DIRECTIONS APPLICATION ---------------------------------------")#FOR ADDING BACKGROUND HIGHLIGHT OF THE TEXT
+print(Style.RESET_ALL)#TO RESET THE STYLE ADDED AND NOT BE INHERITED BY THE NEXT LINE
 
 while True:
     orig = input("Starting Location: ")
