@@ -30,7 +30,7 @@ while True:
             print((each["narrative"]) + " (" + str("{:.2f}".format((each["distance"])*1.61) + " km)"))
         print("=============================================\n")
 
-        elif json_status == 402:
+    elif json_status == 402:
         print("********************************************")
         print("Status Code: " + str(json_status) + "; Invalid user inputs for one or both locations.")
         print("**********************************************\n")
