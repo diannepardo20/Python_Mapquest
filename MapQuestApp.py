@@ -10,6 +10,9 @@ print(Back.WHITE + "\n\n---------------------------------------- MAPQUEST DIRECT
 print(Style.RESET_ALL)#TO RESET THE STYLE ADDED AND NOT BE INHERITED BY THE NEXT LINE
 
 while True:
+    
+    answer = input("\nChoose on what you want to do \n\nA.Start MAPQUEST Application\nB.How to use the application \nC.Quit\n\nAnswer: ") #TO OUTPUT OPTION VALUES
+
     orig = input("Starting Location: ")
     if orig == "quit" or orig == "q":
         break
