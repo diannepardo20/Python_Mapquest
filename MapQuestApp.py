@@ -40,19 +40,28 @@ while True:
             print("\n--DIRECTIONS--")
             for each in json_data["route"]["legs"][0]["maneuvers"]:
                 print((each["narrative"]) + " (" + str("{:.2f}".format((each["distance"])*1.61) + " km)"))
+            print(Fore.BLACK + Style.DIM)
+            print(Back.WHITE + "\n\n----------------------------------------------- END OF DIRECTIONS -----------------------------------------------")
+            print(Style.RESET_ALL)
 
-        // add mo dito gela after 
-        
         elif json_status == 402:
-            print("********************************************")
+            print("-----------------------------------------------")
             print("Status Code: " + str(json_status) + "; Invalid user inputs for one or both locations.")
-            print("**********************************************\n")
+            print("-----------------------------------------------n")
         elif json_status == 611:
-            print("********************************************")
+            print("----------------------------------------------------------------------------------------------")
             print("Status Code: " + str(json_status) + "; Missing an entry for one or both locations.")
-            print("**********************************************\n")
+            print("----------------------------------------------------------------------------------------------")
         else:
-            print("**********************************************************************")
-            print("For Staus Code: " + str(json_status) + "; Refer to:")
+            print("----------------------------------------------------------------------------------------------")
+            print("For Status Code: " + str(json_status) + "; Refer to:")
             print("https://developer.mapquest.com/documentation/directions-api/status-codes")
-            print("************************************************************************\n")
+            print("----------------------------------------------------------------------------------------------")
+
+    elif answer == "B" or answer == "b":#OPTION VALUE FOR OUTPUTTING INSTRUCTIONS
+        print("\nInstructions: Enter the Starting and Destination point to see the directions, \nif you want to quit the application, type 'quit' or 'q' in the input fields\n")
+    elif answer == "C" or answer == "C":#OPTION VALUE TO QUIT APPLICATION
+        print(Fore.BLACK + Style.DIM)#FOR ADDING OF FONT COLOR AND THE OPACITY OF THE FONT
+        print(Back.WHITE + "\n\n-------------------------------------------------- THANK YOU --------------------------------------------------")#FOR ADDING BACKGROUND HIGHLIGHT OF THE TEXT
+        print(Style.RESET_ALL)#TO RESET THE STYLE ADDED AND NOT BE INHERITED BY THE NEXT LINE
+        break
